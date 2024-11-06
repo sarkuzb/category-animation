@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Initial state */
+.ClassName {
+  animation-duration: 400ms;
+  transform: translateX(0);
+  transition: transform 400ms;
+}
+
+/* Slide animation */
+@keyframes Slide {
+  from {
+    transform: translateX(-190px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Reverse Slide animation */
+@keyframes SlideReverse {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-190px);
+  }
+}
+
+/* Apply the animations */
+.ClassName {
+  animation-name: Slide;
+}
+
+.ClassName.reversed {
+  animation-name: SlideReverse;
+}
